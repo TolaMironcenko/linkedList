@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/anatolijmironcenko/Library/Mobile Documents/com~apple~CloudDocs/siaodvevm/siaodvevmLab3/list.cpp
+iostream
+-
+list.h
+/Users/anatolijmironcenko/Library/Mobile Documents/com~apple~CloudDocs/siaodvevm/siaodvevmLab3/list.h
+
+/Users/anatolijmironcenko/Library/Mobile Documents/com~apple~CloudDocs/siaodvevm/siaodvevmLab3/list.h
+

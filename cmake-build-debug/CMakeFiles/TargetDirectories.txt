@@ -1,0 +1,3 @@
+/Users/anatolijmironcenko/Library/Mobile Documents/com~apple~CloudDocs/siaodvevm/siaodvevmLab3/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/anatolijmironcenko/Library/Mobile Documents/com~apple~CloudDocs/siaodvevm/siaodvevmLab3/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/anatolijmironcenko/Library/Mobile Documents/com~apple~CloudDocs/siaodvevm/siaodvevmLab3/cmake-build-debug/CMakeFiles/siaodvevmLab3.dir
