@@ -24,6 +24,7 @@ void List::appstart(int value) {
     if (head == nullptr){
         new_node->next = nullptr;
         head = new_node;
+        last = new_node;
     }else{
         new_node->next = head;
         head = new_node;
@@ -40,6 +41,8 @@ int List::pop() {
     Node *delNode = head;
     head = head->next;
     int first = delNode->data;
+    if (head == nullptr)
+        last = nullptr;
     delete delNode;
     sizeOfList--;
     return first;
@@ -49,6 +52,7 @@ int List::readstart() {
     int val;
     if (head == nullptr){
         cout<<"список пуст"<<endl;
+        throw "Not allowed function POP for empty List";
     }
     val = this->head->data;
     return val;
@@ -123,7 +127,7 @@ void List::appPos(int app, int position) {
         throw "position > sizeOfList";
     }
     while (last1){
-        if (last1->next != nullptr && i+1 == position){
+        if (i+1 == position){
             Node *pos = new Node;
             pos->data = app;
             pos->next = last1->next;
@@ -190,9 +194,18 @@ int List::front() const{
 
 void List::sort()
 {
-    for(int i = 1; i < sizeOfList; i++){
-        if (readPos(i) < 0){
-            appstart(popPos(i));
+    Node *inHead = head;
+    int i = 0;
+    while(inHead){
+        if (inHead->next != nullptr && inHead->next->data < 0){
+            Node *inh = inHead->next;
+            inHead->next = inHead->next->next;
+            inh->next = head;
+            head = inh;
+            i++;
+        }else{
+            i++;
+            inHead = inHead->next;
         }
     }
     last = head;
@@ -200,16 +213,3 @@ void List::sort()
         last = last->next;
     }
 }
-
-
-
-
-List &List::operator=(const List &list) {
-    if (this == &list)
-        return *this;
-    head = list.head;
-    return *this;
-}
-
-
-
